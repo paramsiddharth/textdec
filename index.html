@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+        <meta http-equiv='x-ua-compatible' content='ie=edge'>
+        <link rel='stylesheet' href='req/bootstrap/css/bootstrap.min.css'>
+        <link rel='stylesheet' href='req/fa/css/font-awesome.min.css'>
+        <link rel='stylesheet' href='req/bsocial/bootstrap-social.css'>
+        <link rel="stylesheet" href='req/primary.css'>
+        <title>Text Decorator</title>
+    </head>
+    <body>&nbsp;
+        <div class='container-wrapper'>
+            <div class='container'>
+                <header class='row align-items-center'>
+                    <div class='col'>
+                        <h1 class=''>Text Decorator</h1>
+                    </div>
+                </header>
+                <div class='row nav-row'>
+                    <ul class='nav nav-pills'>
+                       <li class='nav-item'>
+                            <a class='nav-link active' href='#main' data-toggle='pill' role='tab'>Home</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='#about' data-toggle='pill' role='tab'>About</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href='#links' data-toggle='pill' role='tab'>Links</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class='tab-content'>
+                    <div class='tab-pane fade show active' id='main' role='tabpanel'>
+                        <div class='row content-main'>
+                        <div class='col-12 col-md-6'>
+                            <h2>Decorations:</h2>
+                            <div class='dropdown'>
+                                <button id='decorSelect' class="btn btn-danger dropdown-toggle" type='button' data-toggle="dropdown">Select Decoration</button>
+                                <div id='decorSelectionMenu' class="dropdown-menu scrollable-menu dropdown-menu-left">
+                                    <!-- 7 -->
+                                    <button type='button' class='dropdown-item' value='7'>Customize font</button>
+                                    <button type='button' class='dropdown-item' value='2'>Surround each word with something</button>
+                                    <button type='button' class='dropdown-item' value='3'>Make line-breaks Instagram-safe</button>
+                                    <button type='button' class='dropdown-item' value='5'>Count words</button>
+                                    <button type='button' class='dropdown-item' value='0'>Reverse everything</button>
+                                    <button type='button' class='dropdown-item' value='1'>Reverse the order of words</button>
+                                    <button type='button' class='dropdown-item' value='4'>Reverse each word</button>
+                                    <button type='button' class='dropdown-item' value='6'>Capitalize each word</button>
+                                    
+                                </div>
+                            </div>
+                            <div id="secondaryDrop" class='dropdown d-none mt-1'>
+                                <button id='secondaryParam' class="btn btn-light dropdown-toggle" type='button' data-toggle="dropdown">Type or select a parameter:</button>
+                                <div id='secondarySelectionMenu' class="dropdown-menu scrollable-menu dropdown-menu-left"></div>
+                            </div>
+                            <div class="mt-2" id='decorDescription'>
+                                Select a decoration to get started!
+                            </div>
+                        </div>
+                        <div class='col-12 col-md-6 mt-3 mt-md-0'>
+                            <h2>Enter text:</h2>
+                            <textarea id="textToDecorate"></textarea>
+                            <div id="textButtons" class='btn-group' role="group">
+                                <button class="btn btn-primary" type="button" id="generateButton">Generate</button><span class="btn-separator"></span>
+                                <button class="btn btn-success" type="button" id="ctcButton">Copy to Clipboard</button><span class="btn-separator"></span>
+                                <button class="btn btn-danger" type="button" id="clearButton">Clear</button>
+                            </div>
+                            <div id='toastie' class="toast" data-delay="1500" style="position:absolute;bottom:40px;left:20%;">
+                                <div class="toast-body">
+                                    <span>I love bread!</span>
+                                    <button type="button" class='ml-2 close' data-dismiss='toast'>&times;</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class='tab-pane fade' id='about' role='tabpanel'>
+                        <div class='row content-main'>
+                        <div class='col-12'>
+                            <h2>About</h2>
+                            <p>
+                                Text Decorator is a free utility for decorating text, performing
+                                transformations, and more.
+                            </p>
+                            <p>
+                                Hey there! It's me, Param. <img src='https://a.deviantart.net/avatars-big/p/a/paramsiddharth.jpg' style='height:12px;width:12px;border-radius:6px;'><br/>I am a simple person who wants to become wise and loves the nature. I love learning new things and making stuff, like songs, computer applications, art, et cetera.<br/>
+                                <br/>Here is my <a href='http://www.facebook.com/paramsiddharthofficial'>Facebook</a> page.<br/>
+                                I post often on <a href='http://www.twitter.com/paramsiddharth'>Twitter</a>.<br/>
+                                I am quite active on <a href='http://www.instagram.com/paramsiddharth'>Instagram</a>.<br/>
+                                Sometimes, I post videos on <a href='http://www.youtube.com/channel/UC8NHH480saPgR9wnAR4HbKg'>YouTube</a>.<br/>
+                                I am an artist, so you will find me in places like <a href='https://open.spotify.com/artist/1bUv1VdCaRqqHIgsSfUqkU'>Spotify</a> 
+                                and <a href='https://www.deviantart.com/paramsiddharth'>DeviantArt</a> too.<br/>
+                                I love coding, so here is my <a href='https://github.com/paramsiddharth'>GitHub</a> profile.<br/>
+                                That's all for now. :) Stay happy and healthy!
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class='tab-pane fade' id='links' role='tabpanel'>
+                        <div class='row content-main'>
+                        <div class='col-12'>
+                            <h2>Links</h2>
+                            <p>
+                                <ol>
+                                    <li>
+                                        <a href='https://paramsiddharth.github.io/DiceJS/'>
+                                            DiceJS</a>: A JavaScript plugin to simulate interactive six-sided 2D raster dice 
+                                        in webpages.
+                                    </li>
+                                    <li>
+                                        <a href='https://www.softpedia.com/get/System/System-Miscellaneous/CMD-Accounts-Net.shtml'>CMD_Accounts+Net</a>: A
+                                        CLI-based application that can perform a variety of operations.
+                                    </li>
+                                    <li>
+                                        <a href="https://youtu.be/aZmp-K7Fed0">Dil Vich</a>:
+                                        An animated love-song by me.
+                                    </li>
+                                    <li>
+                                        <a href='http://dreamworld-of-manu.blogspot.com/2014/04/india-city.html'>India City</a>: A 
+                                        two-dimensional open world video game, where the player fights against terrorism.
+                                    </li>
+                                    <li>
+                                        <a href='https://www.instagram.com/tv/B_EnISjFi1D/?igshid=9thnw8zmlmw9'>Megastack</a>: 
+                                        A performance of the rap song, Megastack, by me.
+                                    </li>
+                                    <li>
+                                        <a href='https://www.softpedia.com/get/Network-Tools/Misc-Networking-Tools/WiFi-Hotspot-Maker.shtml'>WiFi Hotspot 
+                                            Maker</a>: Built completely in shell, this GUI-based application enables the user to create a simple Wi-Fi hotspot using their device.
+                                    </li>
+                                </ol>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class='row align-items-center'>
+                    <div class='col text-center'>
+                        <div id='madeWith'>Made with <i id='footerHeart' class='fa fa-heart'></i> by&nbsp;<span id="footerNameWrapper"><span id='footerName'><a href="http://paramsiddharth.blogspot.com" id="footerNameLink">Param</a>.</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        &copy; Param Siddharth 2020-<script>document.write((new Date()).getFullYear());</script>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src='req/jquery.min.js'></script>
+        <script src='req/popper.min.js'></script>
+        <script src='req/bootstrap/js/bootstrap.min.js'></script>
+        <script src='req/handler.js'></script>
+    </body>
+</html>

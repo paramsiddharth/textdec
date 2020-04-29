@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'signikabold';
+    src: url('fonts/Signika-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserratblack';
+    src: url('fonts/Montserrat-Black.ttf') format('truetype');
+}
+
+body {
+    background-color: #ffbf00;
+}
+
+a {
+    color: darkred;
+}
+
+.container-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    margin-bottom: 70px;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    background: #ffb5c5;
+    border-radius: 0 60px 0 60px;
+}
+
+.container header {
+    background-color: #dd3c3c;
+    padding: 20px;
+    border-top: 2px solid #b83f3f;
+    border-right: 2px solid #b83f3f;
+    border-left: 2px solid #b83f3f;
+    border-radius: 0 60px 0 0;
+    color: #f0f0f0;
+    font-family: montserratblack;
+}
+
+.container header h1 {
+    font-size: 3em;
+    text-shadow: 1px 1px 7px #888;
+}
+
+.nav-row {
+    padding: 0 12px;
+    background-color: darkred;
+}
+
+.nav .nav-item .active {
+    background-color: #b32e3c;
+    color: #fff;
+}
+
+.nav .nav-item a {
+    color: #ddd;
+}
+
+.nav .nav-item a:hover {
+    color: #fff;
+}
+
+.content-main {
+    padding: 10px 0 20px 0;
+    background-color: #ffb5c5;
+    min-height: 120px;
+    border-right: 2px solid #b83f3f;
+    border-left: 2px solid #b83f3f;
+    font-family: signikabold;
+}
+
+#decorDescription code {
+    color: blue;
+}
+
+#textToDecorate {
+    font-family: monospace;
+    width: 90%;
+    height: 200px;
+}
+
+#textButtons {
+    width: auto;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+    .container-wrapper {
+        top: 20px;
+    }
+    .scrollable-menu {
+        max-height: 140px;
+    }
+    #textToDecorate {
+        width: 100%;
+        height: 170px;
+    }
+    #textButtons {
+        width: 100%;
+    }
+}
+
+.btn-separator:after {
+    content: ' ';
+    display: block;
+    float: left;
+    background: #000;
+    height: 100%;
+    width: 2px;
+}
+
+.container footer {
+    background-color: #d65b5b;
+    border-bottom: 2px solid #b83f3f;
+    border-right: 2px solid #b83f3f;
+    border-left: 2px solid #b83f3f;
+    border-radius: 0 0 0 60px;
+    color: aliceblue;
+    padding: 20px;
+    font-size: 1.2em;
+    font-family: signikabold;
+}
+
+@keyframes heartcolours {
+    0% {
+        color: red;
+        text-shadow: 
+        1px -1px 2px #ed2bc0, 
+        1px 1px 2px #ed2bc0, 
+        -1px 1px 2px #ed2bc0, 
+        -1px -1px 2px #ed2bc0;
+    }
+    16.67% {
+        color: #eee;
+        text-shadow: 
+        1px -1px 2px white, 
+        1px 1px 2px white, 
+        -1px 1px 2px white, 
+        -1px -1px 2px white;
+    }
+    33.33% {
+        color: springgreen;
+        text-shadow: 
+        1px -1px 2px aqua, 
+        1px 1px 2px aqua, 
+        -1px 1px 2px aqua, 
+        -1px -1px 2px aqua;
+    }
+    
+    66.67% {
+        color: gold;
+        text-shadow: 
+        1px -1px 2px yellow, 
+        1px 1px 2px yellow, 
+        -1px 1px 2px yellow, 
+        -1px -1px 2px yellow;
+    }
+    
+    100% {
+        color: red;
+        text-shadow: 
+        1px -1px 2px #ed2bc0, 
+        1px 1px 2px #ed2bc0, 
+        -1px 1px 2px #ed2bc0, 
+        -1px -1px 2px #ed2bc0;
+    }
+}
+
+@keyframes pridecolours {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+#footerHeart {
+    background-image: repeating-linear-gradient(45deg, yellow, red, violet, indigo, blue, green, yellow, orange, red, violet, indigo, blue, green);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400%;
+    animation: pridecolours 2s linear infinite;
+    -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+    /*
+    color: red;
+    text-shadow: 
+    1px -1px 2px #ed2bc0, 
+    1px 1px 2px #ed2bc0, 
+    -1px 1px 2px #ed2bc0, 
+    -1px -1px 2px #ed2bc0;
+    animation: heartcolours 3s linear infinite;
+    */
+}
+
+@keyframes scrollFonts {
+    0% {font-family: signikabold;}
+    50% {font-family: montserratblack;}
+}
+
+#footerNameWrapper {
+    position: relative;
+}
+
+#footerName {
+    position: absolute;
+    animation: scrollFonts 2s linear infinite;
+}
+
+#footerNameLink, #footerNameLink:visited, #footerNameLink:active {
+    text-decoration: none;
+    transition: all 1s;
+    color: inherit;
+}
+
+#footerNameLink:hover {
+    color: antiquewhite;
+    text-decoration: underline;
+    transition: all 1s;
+}
+

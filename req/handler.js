@@ -148,7 +148,7 @@ $(function() {
         window.textie.select();
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
-        $('#toastie .toast-body span').text('Selected!');
+        $('#toastie .toast-body span').text('Copied!');
         $('#toastie').toast("show");
     });
     $("#generateButton").click(()=>{

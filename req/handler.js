@@ -74,7 +74,7 @@ Output: <code>Ek Bihari, Sabpe Bhari</code>',
     7: {
         name: 'csfnt',
         description: 'Converts the text into the selected font.<br/>\
-E. g.\
+E. g.<br/>\
 Input: <code>Wee Darling</code><br/>\
 Selected font: <code>𝘐𝘵𝘢𝘭𝘪𝘤 𝟷</code><br/>\
 Output: <code>𝘞𝘦𝘦 𝘋𝘢𝘳𝘭𝘪𝘯𝘨</code>',

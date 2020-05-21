@@ -85,6 +85,19 @@ Output: <code>𝘞𝘦𝘦 𝘋𝘢𝘳𝘭𝘪𝘯𝘨</code>',
         secondaryBee: [
             '𝐁𝐨𝐥𝐝 𝟏','𝗕𝗼𝗹𝗱 2','𝘐𝘵𝘢𝘭𝘪𝘤 𝟷','𝑰𝒕𝒂𝒍𝒊𝒄 2','𝘽𝙤𝙡𝙙 𝙄𝙩𝙖𝙡𝙞𝙘'
         ]
+    }, 
+    
+    8 : {
+        name: 'wasp',
+        description: 'Enter or select the spoiler title above!<br/>\
+Creates a WhatsApp spoiler message i. e. A <code>Read mode...</code> \
+option will appear below title, which can be used to expand the full message.',
+        secondary: true,
+        secondaryText: 'SPOILER (Click to expand)',
+        secondaryContentEditable: true,
+        secondaryBee: [
+            'Click me!', 'Click to'
+        ]
     }
 };
 
@@ -173,6 +186,13 @@ $(function() {
 });
 
 const decorateIt = function(t,d,e) {
+    let xstart = document.getElementById("textToDecorate").selectionStart,
+    xend = document.getElementById("textToDecorate").selectionEnd,
+    seleCtion = t.substring(xstart,xend),
+    eXtra = '';
+    if (seleCtion != '')
+        eXtra = t,
+        t = seleCtion;
     d = parseInt(d);
     if (d>=window.adcs.length())
         return false;
@@ -214,7 +234,14 @@ const decorateIt = function(t,d,e) {
         case 'csfnt':
             t = customFont(t,window.secondEnt.text());
             break;
+        case 'wasp': {
+            let z = $("#secondaryParam").text();
+            t = z + '\n' + '\u200B'.repeat(4000) + t;
+            }
+            break;
     }
+    if (eXtra != '')
+        t = eXtra.substring(0,xstart)+t+eXtra.substring(xend,eXtra.length);
     e.val(t);
      $('#toastie .toast-body span').text('Generated!');
      $('#toastie').toast("show");

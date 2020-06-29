@@ -90,7 +90,7 @@ Output: <code>𝘞𝘦𝘦 𝘋𝘢𝘳𝘭𝘪𝘯𝘨</code>',
     8 : {
         name: 'wasp',
         description: 'Enter or select the spoiler title above!<br/>\
-Creates a WhatsApp spoiler message i. e. A <code>Read mode...</code> \
+Creates a WhatsApp spoiler message i. e. A <code>Read more...</code> \
 option will appear below title, which can be used to expand the full message.',
         secondary: true,
         secondaryText: 'SPOILER (Click to expand)',

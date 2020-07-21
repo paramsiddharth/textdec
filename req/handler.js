@@ -116,10 +116,23 @@ $(function() {
         if (window.adcs[numnum].secondary) {
             if ($("#secondaryDrop").hasClass("d-none"))
                 $("#secondaryDrop").removeClass("d-none");
-            if (window.adcs[numnum].secondaryContentEditable)
-                $("#secondaryParam").attr("contentEditable","true");
-            else
-                $("#secondaryParam").attr("contentEditable","false");
+            if (window.adcs[numnum].secondaryContentEditable) {
+                // $("#secondaryParam").attr("contentEditable","true");
+                $('#editMeForSec').remove();
+                let editMe = $('<a></a>');
+                editMe.attr({href: '#', id: 'editMeForSec'});
+                editMe.text('Edit');
+                editMe.click(function() {
+                    if (window.secondEnt)
+                        window.secondEnt.removeClass("active");
+                    let tempValSec = prompt('Enter the value:');
+                    $("#secondaryParam").text(tempValSec);
+                });
+                $("#secondaryDrop").append(editMe);
+            } else {
+                // $("#secondaryParam").attr("contentEditable","false");
+                $('#editMeForSec').remove();
+            }
             $("#secondarySelectionMenu").empty();
             for (let i=0;i<window.adcs[numnum].secondaryBee.length;i++) {
                 let x = $("<button></button>");
@@ -183,6 +196,12 @@ $(function() {
             $('#toastie').toast("show");
         }
     });
+    $(document).bind('keyup', 'ctrl+return', function() {$('#generateButton').click();});
+    $(document).bind('keyup', 'ctrl+del', function() {$('#clearButton').click();});
+    $(document).bind('keyup', 'ctrl+home', function() {$('#ctcButton').click();});
+    $(window.textie).bind('keyup', 'ctrl+return', function() {$('#generateButton').click();});
+    $(window.textie).bind('keyup', 'ctrl+del', function() {$('#clearButton').click();});
+    $(window.textie).bind('keyup', 'ctrl+home', function() {$('#ctcButton').click();});
 });
 
 const decorateIt = function(t,d,e) {

@@ -113,9 +113,6 @@ a {
     #textButtons {
         width: 100%;
     }
-    .desktop-only {
-        display: none;
-    }
 }
 
 .btn-separator:after {
@@ -201,7 +198,7 @@ a {
     background-size: 400%;
     animation: pridecolours 2s linear infinite;
     -webkit-text-stroke: 1px black;
-    text-stroke: 1px black;
+    /*text-stroke: 1px black;
     /*
     color: red;
     text-shadow: 

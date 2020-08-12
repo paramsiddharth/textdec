@@ -126,11 +126,11 @@ $(function() {
                     if (window.secondEnt)
                         window.secondEnt.removeClass("active");
                     let tempValSec = prompt('Enter the value:');
-                    $("#secondaryParam").text(tempValSec);
+                    if (tempValSec != null)
+                        $("#secondaryParam").text(tempValSec);
                 });
                 $("#secondaryDrop").append(editMe);
             } else {
-                // $("#secondaryParam").attr("contentEditable","false");
                 $('#editMeForSec').remove();
             }
             $("#secondarySelectionMenu").empty();

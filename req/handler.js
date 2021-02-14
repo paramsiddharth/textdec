@@ -117,24 +117,30 @@ $(function() {
             if ($("#secondaryDrop").hasClass("d-none"))
                 $("#secondaryDrop").removeClass("d-none");
             if (window.adcs[numnum].secondaryContentEditable) {
-                // $("#secondaryParam").attr("contentEditable","true");
                 $('#editMeForSec').remove();
                 let editMe = $('<a></a>');
                 editMe.attr({href: '#', id: 'editMeForSec'});
                 editMe.text('Edit');
                 editMe.click(function() {
-                    if (window.secondEnt)
-                        window.secondEnt.removeClass("active");
-                    let tempValSec = prompt('Enter the value:');
-                    if (tempValSec != null)
-                        $("#secondaryParam").text(tempValSec);
+                    $('#modal-title').text('Enter the value:');
+                    $('#modal-ok').on('click', () => {
+                        const modalInput = $('#modal-input').val();
+                        if (!(modalInput == null || modalInput === '')) {
+                            if (window.secondEnt)
+                                window.secondEnt.removeClass("active");
+                            $('#modal-input').val('');
+                            $("#secondaryParam").text(modalInput);
+                        }
+                    });
+                    $('#modal-cancel').on('click', () => $('#modal-input').val(''));
+                    $('#modal').modal('toggle');
                 });
                 $("#secondaryDrop").append(editMe);
             } else {
                 $('#editMeForSec').remove();
             }
             $("#secondarySelectionMenu").empty();
-            for (let i=0;i<window.adcs[numnum].secondaryBee.length;i++) {
+            for (let i = 0; i < window.adcs[numnum].secondaryBee.length; i++) {
                 let x = $("<button></button>");
                 x.text(window.adcs[numnum].secondaryBee[i]);
                 x.attr({
@@ -196,12 +202,12 @@ $(function() {
             $('#toastie').toast("show");
         }
     });
-    $(document).bind('keyup', 'ctrl+return', function() {$('#generateButton').click();});
-    $(document).bind('keyup', 'ctrl+del', function() {$('#clearButton').click();});
-    $(document).bind('keyup', 'ctrl+home', function() {$('#ctcButton').click();});
-    $(window.textie).bind('keyup', 'ctrl+return', function() {$('#generateButton').click();});
-    $(window.textie).bind('keyup', 'ctrl+del', function() {$('#clearButton').click();});
-    $(window.textie).bind('keyup', 'ctrl+home', function() {$('#ctcButton').click();});
+    $(document).bind('keyup', 'ctrl+return', () => $('#generateButton').click());
+    $(document).bind('keyup', 'ctrl+del', () => $('#clearButton').click());
+    $(document).bind('keyup', 'ctrl+home', () => $('#ctcButton').click());
+    $(window.textie).bind('keyup', 'ctrl+return', () => $('#generateButton').click());
+    $(window.textie).bind('keyup', 'ctrl+del', () => $('#clearButton').click());
+    $(window.textie).bind('keyup', 'ctrl+home', () => $('#ctcButton').click());
 });
 
 const decorateIt = function(t,d,e) {

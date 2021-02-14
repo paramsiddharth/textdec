@@ -96,7 +96,8 @@ a {
 }
 
 #decorDescription code {
-    color: blue;
+    color: rgb(0, 0, 189);
+    font-weight: bold;
 }
 
 #decorDescription p {

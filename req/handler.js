@@ -208,6 +208,8 @@ $(function() {
     $(window.textie).bind('keyup', 'ctrl+return', () => $('#generateButton').click());
     $(window.textie).bind('keyup', 'ctrl+del', () => $('#clearButton').click());
     $(window.textie).bind('keyup', 'ctrl+home', () => $('#ctcButton').click());
+
+    setTimeout(() => $('#Loader').fadeOut('slow', () => $('#Loader').remove()), 1000);
 });
 
 const decorateIt = function(t,d,e) {

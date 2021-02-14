@@ -12,12 +12,22 @@
         <link rel='shortcut icon' href='req/favicon.ico'>
         <title>Text Decorator</title>
     </head>
-    <body>&nbsp;
+    <body>
+        <div id='Loader' class='jumbotron d-flex align-items-center uSn'>
+            <div class='container-fluid'>
+                <div class='row text-center'>
+                    <div class='col-12 col-md-6 offset-md-3'>
+                        <h1 class='lead-text'>Welcome to Text Decorator!</h1>
+                        <span class='h4'>Made with <i class='footerHeart fa mt-2 fa-heart'></i> by Param.</span>
+                    </div>
+                </div>
+            </div>
+        </div>&nbsp;
         <div id='modal' class='modal fade mt-3' role='dialog'>
             <div class='modal-dialog'>
                 <div class='modal-content'>
                     <div class='modal-header'>
-                        <h5 class='modal-title' id='modal-title'>Title</h5>
+                        <h5 class='modal-title uSn' id='modal-title'>Title</h5>
                         <button type='button' class='close' data-dismiss='modal'>
                             <span aria-hidden='true'>&times;</span>
                         </button>
@@ -38,7 +48,7 @@
             <div class='container mb-4 mb-md-2'>
                 <header class='row align-items-center'>
                     <div class='col'>
-                        <h1 class=''>Text Decorator</h1>
+                        <h1 class='uSn'>Text Decorator</h1>
                     </div>
                 </header>
                 <div class='row nav-row' role='tablist'>
@@ -58,7 +68,7 @@
                     <div class='tab-pane fade show active' id='main' role='tabpanel'>
                         <div class='row content-main'>
                         <div class='col-12 col-md-6'>
-                            <h2>Decorations:</h2>
+                            <h2 class='uSn'>Decorations:</h2>
                             <div class='dropdown'>
                                 <button id='decorSelect' class="btn btn-danger dropdown-toggle" type='button' data-toggle="dropdown">Select Decoration</button>
                                 <div id='decorSelectionMenu' class="dropdown-menu scrollable-menu dropdown-menu-left">
@@ -79,7 +89,7 @@
                                 <button id='secondaryParam' class="btn btn-light dropdown-toggle" type='button' data-toggle="dropdown">Type or select a parameter:</button>
                                 <div id='secondarySelectionMenu' class="dropdown-menu scrollable-menu dropdown-menu-left"></div>
                             </div>
-                            <div class="mt-2" id='decorDescription'>
+                            <div class="mt-2 uSn" id='decorDescription'>
                                 <p>Select a decoration to get started!</p>
                                 <p>The decoration will be applied to all the text. 
                                 If a part of it is selected, only the selection will be affected.</p>
@@ -94,7 +104,7 @@
                             </div>
                         </div>
                         <div class='col-12 col-md-6 mt-3 mt-md-0'>
-                            <h2>Enter text:</h2>
+                            <h2 class='uSn'>Enter text:</h2>
                             <textarea id="textToDecorate"></textarea>
                             <div id="textButtons" class='btn-group' role="group">
                                 <button class="btn btn-primary" type="button" id="generateButton">Generate</button><span class="btn-separator"></span>
@@ -111,7 +121,7 @@
                         </div>
                     </div>
                     <div class='tab-pane fade' id='about' role='tabpanel'>
-                        <div class='row content-main'>
+                        <div class='row uSn content-main'>
                         <div class='col-12'>
                             <h2>About</h2>
                             <p>
@@ -155,7 +165,7 @@
                         </div>
                     </div>
                     <div class='tab-pane fade' id='links' role='tabpanel'>
-                        <div class='row content-main'>
+                        <div class='row uSn content-main'>
                         <div class='col-12'>
                             <h2>Links</h2>
                             <p>
@@ -191,8 +201,8 @@
                     </div>
                 </div>
                 <footer class='row align-items-center'>
-                    <div class='col text-center'>
-                        <div id='madeWith'>Made with <i id='footerHeart' class='fa fa-heart'></i> by&nbsp;<span id="footerNameWrapper"><span id='footerName'><a href="http://paramsid.com" id="footerNameLink" target="_blank">Param</a>.</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class='col uSn text-center'>
+                        <div id='madeWith'>Made with <i class='footerHeart fa fa-heart'></i> by&nbsp;<span id="footerNameWrapper"><span id='footerName'><a href="http://paramsid.com" id="footerNameLink" target="_blank">Param</a>.</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                         &copy; Param Siddharth 2020-<script>document.write((new Date()).getFullYear());</script>
                     </div>
                 </footer>
